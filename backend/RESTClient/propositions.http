@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:3000
+
+######### NORMAL OPERATION  ###########
+
+
+
+### Read all pizzas
+GET http://localhost:3000/propositions
+
+### Read pizza identified by 2
+GET http://localhost:3000/propositions/2
+
+
+### Create a pizza
+POST {{baseUrl}}/propositions
+Content-Type: application/json
+
+{
+   
+    "proposition":"pourrez vous accepter mon invitation",
+    "status":"submitted"
+    
+    
+}
+
+### Update the pizza identified by 2
+PUT http://localhost:3000/propositions/3
+Content-Type: application/json
+
+{
+    "proposal":"test 34"
+}
+
+### Delete pizza identified by 2
+DELETE http://localhost:3000/propositions/2
+
+
